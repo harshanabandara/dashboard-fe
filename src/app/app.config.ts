@@ -12,6 +12,6 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
     provideHttpClient(),
-    provideStore([AuthState], withNgxsStoragePlugin({ keys: ['auth.token'] }))
+    provideStore([AuthState], withNgxsStoragePlugin({ keys: ['auth.token', 'auth.isAuthenticated'] }))
   ]
 };
