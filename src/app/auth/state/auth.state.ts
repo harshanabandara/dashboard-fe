@@ -28,7 +28,6 @@ export class AuthState {
 
     @Selector()
     static isAuthenticated(state: AuthStateModel): boolean {
-        console.log("I'm getting called: ", state.isAuthenticated)
         return state.isAuthenticated;
     }
 
