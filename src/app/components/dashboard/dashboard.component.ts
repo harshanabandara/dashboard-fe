@@ -7,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './dashboard.component.css'
 })
 export class DashboardComponent {
-
+  totalUsers: number = 10;
+  totalActiveUsers: number = 2;
+  lastUserAdded: string = "Harshana Bandara"
 }

@@ -22,10 +22,26 @@ export class LoginComponent {
       password: this.loginForm.value.password ?? ''
     }
     console.log(this.loginForm.value)
-    this.store.dispatch(new Login(credentials)).subscribe(() => {
-      console.log("here")
-      this.router.navigate(['/home'])
-    })
+    this.store.dispatch(new Login(credentials)).subscribe(
+      {
+        next: () => {
+          this.router.navigate(['/home'])
+        },
+        error: (err) => {
+          console.error("login failed", err);
+          this.handleLoginError(err);
+        }
+      }
+    )
+  }
+  handleLoginError(err: any) {
+    if (err.status >= 400 && err.status < 500) {
+      alert('Invalid username or password')
+    } else if (err.status >= 500 && err.status < 600) {
+      alert('Server error, cannot complete request')
+    } else {
+      alert('Something went wrong. Try again later')
+    }
   }
 
   loginForm = new FormGroup({

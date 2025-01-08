@@ -7,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './user-management.component.css'
 })
 export class UserManagementComponent {
+  deleteUser(arg0: any) {
+    throw new Error('Method not implemented.');
+  }
 
 }

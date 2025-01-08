@@ -1,1 +1,2 @@
-export const baseURL = 'https://904bb9c0-036c-43ac-96aa-e6e0a889bfd1.mock.pstmn.io' 
+// export const baseURL = 'https://904bb9c0-036c-43ac-96aa-e6e0a889bfd1.mock.pstmn.io' 
+export const baseURL = 'http://localhost:8080'
