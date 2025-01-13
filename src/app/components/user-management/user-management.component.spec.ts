@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UserManagementComponent } from './user-management.component';
-
+import { NgFor } from '@angular/common';
 describe('UserManagementComponent', () => {
   let component: UserManagementComponent;
   let fixture: ComponentFixture<UserManagementComponent>;
@@ -10,7 +10,7 @@ describe('UserManagementComponent', () => {
     await TestBed.configureTestingModule({
       imports: [UserManagementComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(UserManagementComponent);
     component = fixture.componentInstance;
