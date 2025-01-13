@@ -1,22 +1,12 @@
-<p>dashboard works!</p>
 <div class="dashboard">
     <h1>Dashboard</h1>
-
-    <!-- Summary Card 1: Total number of users -->
     <div class="card">
         <h2>Total Users</h2>
-        <div class="card-value">{{ totalUsers }}</div>
+        <div class="card-value">{{ summarySignal().totalUsers }}</div>
     </div>
-
-    <!-- Summary Card 2: Total active users -->
-    <div class="card">
-        <h2>Total Active Users</h2>
-        <div class="card-value">{{ totalActiveUsers }}</div>
-    </div>
-
-    <!-- Summary Card 3: Last user added -->
     <div class="card">
         <h2>Last User Added</h2>
-        <div class="card-value">{{ lastUserAdded }}</div>
+        <div class="card-value">{{ formatDate(summarySignal().lastUserAdded)}}</div>
     </div>
+    <app-users-graph></app-users-graph>
 </div>

@@ -1,0 +1,11 @@
+.home-flexbox{
+    display: flex;
+}
+
+app-dashboard {
+    flex:auto
+}
+
+app-user-management {
+    flex: auto;
+}
