@@ -7,7 +7,7 @@ import { tap } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  private endpoint = `${baseURL}/login`;
+  private endpoint = `${baseURL}/api/login`;
   http = inject(HttpClient)
   login(credentials: { username: string, password: string }) {
     return this.http.post<{ token: string }>(this.endpoint, credentials).pipe(
