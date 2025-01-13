@@ -1,0 +1,11 @@
+<div *ngIf="totalPages > 0" class="pagination-container">
+    <form [formGroup]="paginationForm">
+        <label>page </label>
+        <input formControlName="pageNumber" name="pageNumber" type="number" [min]="1" [max]="totalPages" (change)="updateUsers($event)"/>
+        <label> users per page</label>
+        <select formControlName="limit" type="number" (change)="updateUsers($event)">
+            <!-- [value]="limit" -->
+            <option *ngFor="let limit of [5, 10, 20]" [ngValue]="limit" type="number" >{{ limit }}</option>
+        </select>
+    </form>
+</div>
