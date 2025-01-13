@@ -1,0 +1,12 @@
+#ActivityChart {
+    width: 100%;
+    /* Makes the chart responsive */
+    max-width: 600px;
+    /* Optional: Limit the maximum width */
+    height: 400px;
+    /* Fixed height for the chart */
+    margin: 0 auto;
+    /* Center the chart */
+    display: block;
+    /* Ensures the canvas is treated as a block element */
+}
